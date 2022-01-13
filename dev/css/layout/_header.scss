@@ -1,0 +1,125 @@
+.prenav {
+    display: flex;
+    padding: 24px 0;
+    justify-content: center;
+
+    .logo {
+        background: $red;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 283px;
+        text-transform: uppercase;
+        margin: 0 10px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+
+        .logo-title {
+            font-size: 5rem;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .logo-subtitle {
+            font-size: 0.75rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+    }
+
+    .infos-search {
+        padding: 0 10px;
+
+        .inf-search-ct {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 5px 0;
+
+            .weather {
+                display: flex;
+                justify-content: space-around;
+                width: 55%;
+                padding: 15px 0;
+                font-family: 'Montserrat', sans-serif;
+                text-transform: uppercase;
+                font-size: 11px;
+
+                .connexion {
+                    a {
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+
+            form {
+                display: flex;
+                justify-content: end;
+
+                #searchBar {
+                    height: 32px;
+                    border: none;
+                    background: #F5F5F5;
+                    outline: none;
+                    width: 68%;
+                }
+
+                button {
+                    height: 32px;
+                    border: none;
+                    background: #F5F5F5;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .header-news {
+        background: url(../../assets/img/22-324x400.jpg)no-repeat center/cover;
+        width: 11%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 10px;
+        margin: 0 10px ;
+        position: relative;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.247);
+        }
+        
+
+        .category-pill {
+            background: $red;
+            color: white;
+            z-index: 2;
+            margin: 0 0 5px 0;
+            font-size: 0.8rem;
+            padding: 3px 6px 3px 6px;
+        }
+        .title {
+            color: white;
+            z-index: 2;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+    }
+
+
+}
