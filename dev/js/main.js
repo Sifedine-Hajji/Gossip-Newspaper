@@ -1,21 +1,21 @@
-let slideIndex = 1;
-showNews(slideIndex);
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "vertical",
+  loop: true,
 
-function prevnextNews(n) {
-  showNews((slideIndex += n));
-}
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
 
-function showNews(n) {
-  let i;
-  const news = document.getElementsByClassName("trending-news");
-  if (n > news.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = news.length;
-  }
-  for (i = 0; i < news.length; i++) {
-    news[i].style.display = "none";
-  }
-  news[slideIndex - 1].style.display = "block";
-}
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+});
