@@ -1,0 +1,66 @@
+nav {
+    border: 1px solid lightgray;
+    border-left: none;
+    border-right: none;
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        a {
+            display: block;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        .main-links {
+            display: flex;
+            a {
+                
+                &:hover {
+                    color: white;
+                    background-color: black;
+                }
+            }
+        }
+        .hot-link {
+
+            a {
+                span {
+                    color: $primary;
+                }
+                
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: url('https://i.pinimg.com/originals/55/e8/1e/55e81ed4b955587451af5555921d8002.jpg')no-repeat center/cover;
+    
+        .main-links {
+            display: flex;
+            flex-direction: column;
+            padding: 60px 0;
+    
+            a {
+                color: white;
+                padding: 10px;
+            }
+        }
+
+        &.nav-active {
+            left: 0;
+            transition: .5s all ease-in-out;
+        }
+    }
+}

@@ -1,0 +1,142 @@
+header {
+    .prenav {
+        display: flex;
+        justify-content: center;
+        padding: 24px 0;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: $primary;
+            cursor: pointer;
+            padding: 0 20px;
+
+            * {
+                color: white;
+            }
+
+            .logo-title {
+
+                font-weight: 600;
+                font-size: 80px;
+            }
+
+            .logo-subtitle {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 13px;
+            }
+        }
+
+        .middle-sct {
+            padding: 0 20px;
+
+            .inf-search-ct {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5px 0;
+                margin: 0 0 10px 0;
+
+                .weather {
+                    display: flex;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 11px;
+                    justify-content: space-around;
+                    width: 55%;
+
+                    .sign-login {
+                        a:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+                form {
+                    display: flex;
+                    justify-content: end;
+    
+                    #searchBar {
+                        height: 32px;
+                        border: none;
+                        background: #F5F5F5;
+                        outline: none;
+                        width: 152px;
+                    }
+    
+                    button {
+                        height: 32px;
+                        border: none;
+                        background: #F5F5F5;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .header-news {
+            background: url('../../assets/img/22-324x400.jpg')no-repeat center/cover;
+            width: 137px;
+            height: 148px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: flex-start;
+            padding: 10px;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                background: rgba(0, 0, 0, 0.411);
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            
+            .title {
+                color: white;
+                z-index: 2;
+                font-size: 0.85rem;
+                font-weight: 700;
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    
+}
+
+@include mobile {
+    header {
+        display: flex;
+        position: relative;
+        background: $primary;
+        height: 56px;
+
+        .prenav {
+            
+            div:not(.logo) {
+                display: none;
+            }
+            .logo {
+
+                .logo-title {
+                    font-size: 36px;
+                }
+
+                .logo-subtitle {
+                    display: none;
+                }
+            }
+            .header-news {
+                display: none;
+            }
+
+        }
+    }
+
+}
